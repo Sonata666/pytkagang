@@ -57,9 +57,6 @@ body {
  * 1. Add a non-breaking space
  * 2. Make sure it doesn't mess up the DOM flow
  */
- *{
-	outline: 2px solid green;
- }
 
 
 
