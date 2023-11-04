@@ -416,4 +416,38 @@ position: absolute;
 	.logo {
 	  display: none;
 	}
+	.text-box {
+		
+		padding-top: 800px;
+		
+		}
+		.records h1{
+			color: black;
+			display: flex;
+			font-size: 23px;
+			justify-content: center;
+			font-family: 'Roboto', sans-serif;
+		}
+		.hover-text-one figure img {
+			position: relative;
+			display: block;
+			min-height: 100%;
+			opacity: 0.8;
+			width: 100em;
+			height: 400px;
+			transition: transform 0.5s;
+		}
+		.realised-block__img img{
+			width: 100px;
+			transition: 0.5s all ease-in-out;
+			padding-left: 10px;
+		}
+		.realised-header {
+			width: 550px;
+			padding-left: 80px;
+		}
+.video-container iframe{
+	width: 400px;
+	height: 300px;
+}
   }
