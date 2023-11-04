@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('./reset.css');
+
+body {
+	color: #000;
+	background-color: #f4f4f4;
+	transition: background-color 1s ease;
+	}
+
+
+
+	/* colours */
+
+	
+	.color-black {
+	background-color: #000000;
+	}
+
+	.color-white {
+	background-color: #ffffff;
+	}
+
+
+
+
+.logo img{
+    width: 250px;
+}
+.menu{
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+	text-decoration: none;
+}
+.menu li a{
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+	color: black;
+	padding: 0 5em;
+}
+.logo {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	z-index: 2;
+	height: 10em;
+}
+
+/**
+ * Display lists on a single line.
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+
+
+
+
+
+
+
+
+/* Общие стили */
+*, *:after, *:before { 
+	box-sizing: border-box; 
+}
+.clearfix:before, .clearfix:after { 
+	content: ''; 
+	display: table; 
+}
+.clearfix:after { 
+	clear: both; 
+}
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+    width: 100vw;
+    height: 818px;
+    transition: transform 0.5s;
+}
+.hover-text-one figure:hover img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+
+    filter: blur(13px);
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure h3 span {
+	font-weight: 800;
+}
+.hover-text-one figure h3,
+.hover-text-one figure p {
+    color: white;
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Эффект при наведении */
+figure.effect-text-two figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(19, 3, 3, 0.8) 75%);
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(15, 4, 4, 0.8) 75%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+figure.effect-text-two h3 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: white !important;
+	text-shadow: 1px 1px 1px #000;
+	-webkit-transition: -webkit-transform 0.5s, color 0.5s;
+	transition: transform 0.5s, color 0.5s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+figure.effect-text-two figcaption::before,
+figure.effect-text-two p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-text-two p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+}
+figure.effect-text-two:hover h3 {
+	color: black;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+figure.effect-text-two:hover figcaption::before ,
+figure.effect-text-two:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+
+
+
+.realised{
+    padding-top: 120px;
+	padding-bottom: 200px;
+}
+.realised-block-keeper{
+	margin: 15em 0;
+    display: flex;
+    justify-content: space-between;
+}
+.realised-block{
+    width: 500px;
+}
+.realised-block__img img{
+    width: 500px;
+    transition: 0.5s all ease-in-out;
+}
+.realised-block__img:hover img{
+    transform: scale(1.05);
+}
+
+.realised-header {
+    width: 50px;
+    padding-left: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.realised-block__text{
+    padding-top: 25px;
+}
+.realised-block__text h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+}
+.realised-block__text p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+.video-container{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 250px;
+}
+
+.video-header{
+    width: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+	font-weight: bold;
+	color: black;
+	padding-bottom: 100px;
+	padding-left: 150px;
+}
+
+
+
+.records h1{
+	color: black;
+	display: flex;
+    font-size: 28px;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.records-block{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10em;
+	margin-bottom: 30em;
+
+}
+
+.records-header{
+    width: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+	font-weight: bold;
+	color: black;
+	padding-bottom: 150px;
+	padding-left: 150px;
+}
+
+.text-box {
+padding-right: 250px;
+padding-top: 250px;
+position: absolute;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 35px 50px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #000000;
+    color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .8s;
+}
+
+.btn-white::after {
+    background-color: #2d00cf;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+.merch-container{
+	width: 550px;
+
+}
+.merch-block{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 150px;
+	align-items: center;
+	
+}
+.merch-text{
+	color: white;
+	display: flex;
+    font-size: 20px;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.merch-header{
+    width: 50px;
+    padding-left: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+	font-weight: bold;
+	color: white;
+	padding-bottom: 150px;
+}
+
+
+.footer{
+	padding-top: 200px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 50em;
+
+}
+.madebysizhka{
+	color: rgba(255, 255, 255, 0.425);
+	display: flex;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+	.logo {
+	  display: none;
+	}
+  }
